@@ -2,12 +2,12 @@ import Image from "next/image";
 import LinkNavigation from "./LinkNavigation";
 function Footer() {
   return (
-    <section className="bg-primary-color flex items-center justify-between px-10 py-5">
-      <div className="justify-items-start">
+    <section className="bg-primary-color flex items-center px-10 py-5 justify-between">
+      <div className="shrink-0">
         <Image alt="Diverse logo" src="logo/icon.svg" width={94} height={94} />
       </div>
-      <div>
-        <ul className="text-error-color text-[1rem] flex gap-3">
+      <div className="shrink sm:shrink-0 ms-5">
+        <ul className="text-error-color text-[1rem] flex gap-3 flex-wrap">
           <LinkNavigation path="/#">Vi tilbyder</LinkNavigation>
           <LinkNavigation path="/#">Artikler</LinkNavigation>
           <LinkNavigation path="/#">Priser</LinkNavigation>
@@ -27,7 +27,7 @@ function Footer() {
           </LinkNavigation>
         </ul>
       </div>
-      <div className="w-[10%]"></div>
+      <div className="w-0 sm:w-[94px] shrink"></div>
     </section>
   );
 }
