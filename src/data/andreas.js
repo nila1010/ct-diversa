@@ -1,0 +1,26 @@
+const test = [
+  {
+    name: "",
+    shortDesc: "",
+    longDesc: "",
+    impact: "",
+    whyDesc: "",
+    imgPath: "",
+    imgAlt: "",
+    imgPath2: "",
+    imgAlt2: "",
+    affect: ["", "", "", ""],
+  },
+  {
+    name: "",
+    shortDesc: "",
+    longDesc: "",
+    impact: "",
+    whyDesc: "",
+    imgPath: "",
+    imgAlt: "",
+    imgPath2: "",
+    imgAlt2: "",
+    affect: ["", "", "", ""],
+  },
+];

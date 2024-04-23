@@ -3,27 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  /*COLORS*/
+  --colors-brand-beige-00: rgba(254, 254, 251, 1);
+  --colors-brand-beige-10: rgba(247, 246, 232, 1);
+  --colors-brand-turquoise-00: rgba(230, 250, 254, 1);
+  --colors-brand-turquoise-20: rgba(180, 241, 253, 0.2);
+  --colors-brand-turquoise-50: rgba(105, 227, 252, 1);
+  --colors-brand-yellow-20: rgba(255, 234, 128, 0.2);
+  --colors-brand-yellow-40: rgba(255, 234, 128, 1);
+  --colors-brand-yellow-100: rgba(229, 192, 0, 1);
+  --colors-brand-orange-20: rgba(255, 119, 51, 0.2);
+  --colors-brand-orange-70: rgba(255, 119, 51, 1);
+  --colors-grey-00: rgba(255, 255, 255, 1);
+  --colors-grey-20: rgba(204, 204, 204, 1);
+  --colors-grey-40: rgba(153, 153, 153, 1);
+  --colors-grey-60: rgba(102, 102, 102, 1);
+  --colors-grey-80: rgba(51, 51, 51, 1);
+  --colors-grey-100: rgba(0, 0, 0, 1);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+  /*FONTSIZE*/
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  --step-0: clamp(1rem, 0.9458rem + 0.2312cqi, 1.125rem);
+  --step-1: clamp(1.2rem, 1.1106rem + 0.3815cqi, 1.4063rem);
+  --step-2: clamp(1.44rem, 1.3022rem + 0.5879cqi, 1.7578rem);
+  --step-3: clamp(1.728rem, 1.5246rem + 0.868cqi, 2.1973rem);
+  --step-4: clamp(2.986rem, 2.42rem + 2.4149cqi, 4.2915rem);
+  --step-5: clamp(5rem, 3.9162rem + 4.6231cqi, 7.5rem);
 }
 
 @layer utilities {
