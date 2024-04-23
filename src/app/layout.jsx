@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <header>
           <Navigation />
         </header>
-        <main className="p-10">{children}</main>
+        <main className="m-10">{children}</main>
         <footer>
           <Footer />
         </footer>

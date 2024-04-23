@@ -36,11 +36,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: var(--colors-grey-80);
 }
 
 main {
   flex-grow: 1;
   overflow: hidden;
+  height: 100%;
 }
 
 @layer utilities {
