@@ -28,7 +28,7 @@ function Navigation() {
         </div>
       </Link>
       {width > 860 ? (
-        <ul className="flex gap-5">
+        <ul className="flex gap-5 text-md">
           <Linknavigation path="/#">Check site</Linknavigation>
           <Linknavigation path="/#">Regler</Linknavigation>
         </ul>
