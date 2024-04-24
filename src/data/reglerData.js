@@ -1,6 +1,6 @@
 export const reglerData = [
   {
-    name: "",
+    name: "heading-order",
     shortDesc: "",
     longDesc: "",
     impact: "",
@@ -12,7 +12,19 @@ export const reglerData = [
     affect: ["", "", "", ""],
   },
   {
-    name: "",
+    name: "region",
+    shortDesc: "",
+    longDesc: "",
+    impact: "",
+    whyDesc: "",
+    imgPath: "",
+    imgAlt: "",
+    imgPath2: "",
+    imgAlt2: "",
+    affect: ["", "", "", ""],
+  },
+  {
+    name: "landmark-unique",
     shortDesc: "",
     longDesc: "",
     impact: "",

@@ -1,9 +1,9 @@
-const dummyData = {
+export const dummyData = {
   url: "https://www.kea.dk/",
   tags: ["wcag21a", "wcag21aa", "best-practice"],
   timestamp: "2024-04-18T15:08:21.568Z",
   screenshot: {
-    url: "kea.webp",
+    url: "/images.unsplash.com/photo-1516259762381-22954d7d3ad2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXxlbnwwfHwwfHx8MA%3D%3D",
     width: 1440,
     height: 960,
   },
