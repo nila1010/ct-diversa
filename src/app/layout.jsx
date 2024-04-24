@@ -13,6 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="da">
+      <head>
+        <meta name="robots" content="noindex"></meta>
+      </head>
       <body className={`${poppins.className} bg-background-color-primary`}>
         <header>
           <Navigation />
