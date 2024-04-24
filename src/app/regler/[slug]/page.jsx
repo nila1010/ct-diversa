@@ -35,7 +35,6 @@ export default async function Regl({ params }) {
         <h2 className="text-md">Hvem det påvirker:</h2>
         <ul className="flex gap-2">
           {data.affect.map((one, index) => {
-            console.log(one);
             return (
               <li className="text-sm" key={index}>
                 {one}
