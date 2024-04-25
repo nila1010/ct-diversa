@@ -16,7 +16,7 @@ export default function Resultat() {
                 <figure className="flex flex-col place-content-center gap-y-2 md:order-1">
                     <h2 className="text-xl text-state-2">Din url er her: Data</h2>
                     <p className='text-pretty'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus provident doloribus ipsum aliquid autem quod blanditiis soluta facere quisquam distinctio, sequi voluptatum consectetur iure cum odit accusamus eligendi commodi. Ab.</p>
-                    <Image className="w-auto object-contain" src="/kea.webp" alt="Logo" width={640} height={480}/>
+                    <Image className="w-auto object-contain" src="/dummyImg.svg" alt="Logo" width={640} height={480}/>
                 </figure>
             </article>
         </section>
