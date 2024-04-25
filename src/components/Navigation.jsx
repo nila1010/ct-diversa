@@ -23,8 +23,8 @@ function Navigation() {
     <nav className="relative flex justify-between py-5 px-10 items-center bg-backgound-color-secondary">
       <Link href="/#">
         <div className="flex gap-5">
-          <Image alt="Diverse logo" src="logo/diversa_icon.svg" width={49} height={49} />
-          <Image alt="Diverse logo" src="logo/diversa.svg" width={160} height={37} />
+          <Image alt="Diverse logo" src="/logo/diversa_icon.svg" width={49} height={49} />
+          <Image alt="Diverse logo" src="/logo/diversa.svg" width={160} height={37} />
         </div>
       </Link>
       {width > 860 ? (
