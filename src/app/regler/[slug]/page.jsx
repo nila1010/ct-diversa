@@ -44,11 +44,11 @@ export default async function Regl({ params }) {
         </ul>
       </div>
       <article className="mt-10">
-        <h2 className="text-lg">Beskrivelse:</h2>
+        <h2 className="text-xl">Beskrivelse:</h2>
         <p className="text-sm max-w-prose">{data.longDesc}</p>
       </article>
       <article className="mt-10">
-        <h2 className="text-lg">Hvorfor er det vigtigt?</h2>
+        <h2 className="text-xl">Hvorfor er det vigtigt?</h2>
         <p className="text-sm max-w-prose">{data.whyDesc}</p>
       </article>
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">

@@ -1,22 +1,21 @@
 import React from 'react';
 import styles from './Regler.module.css';
-import simonData from './simon';
-import Link from 'next/link';
-import Butten from "@/components/Butten";
+import ReglerHeader from '@/components/ReglerHeader';
+import ReglerTable from '@/components/ReglerTable';
 
-function getImpactClassName(impact) {
+export function getImpactClassName(impact) {
     let className = '';
     switch (impact) {
-        case 'Critical':
+        case 'Kritisk':
             className = styles.impactCritical;
             break;
-            case 'Serious':
+        case 'Seriøs':
             className = styles.impactCritical;
             break;
-        case 'Moderate':
+        case 'Moderere':
             className = styles.impactModerate;
             break;
-        case 'Minor':
+        case 'Mindre':
             className = styles.impactMinor;
             break;
         default:
@@ -26,39 +25,11 @@ function getImpactClassName(impact) {
     return className;
 }
 
-export default function Regler() {
-    return (
-        <div className={styles.gridContainer}>
-            <div className={styles.textcol}>
-                <h1 className='text-xl'>Regler</h1>
-                <p className={styles.paragraph}>Denne side indeholder en tabel over Axe's HTML 4.9 tilgængelighedsregler, designet til at guide webudviklere og designere i at opnå bedre digital tilgængelighed.</p>
-            </div>
-            <div className={styles.griditem}>
-                <table className={styles.table}>
-                    <thead>
-                        <tr>
-                            <th className={styles.headerCell}>Navn på regel</th>
-                            <th className={`${styles.headerCell} ${styles.descColumn}`}>Beskrivelse</th>
-                            <th className={styles.headerCell}>Vigtighed</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {simonData.map((item) => (
-  <tr key={item.id} className={(item.id % 2 === 0) ? styles.tableRowEven : ''}>
-    <td className={styles.dataCell}>{item.name}</td>
-    <td className={`${styles.dataCell} ${styles.descColumn}`}>{item.shortDesc}</td>
-    <td className={`${styles.dataCell} ${getImpactClassName(item.impact)}`}>{item.impact}</td>
-    <td className={`${styles.dataCell} ${styles.lastColumn}`}>
-    <Butten variant="input" path="/">
-            Læs mere om fejlen her
-          </Butten>
-    </td>
-  </tr>
-))}
+const Regler = () => (
+    <div className={styles.gridContainer}>
+        <ReglerHeader />
+        <ReglerTable />
+    </div>
+);
 
-            </tbody>
-                </table>
-            </div>
-        </div>
-    );
-}
+export default Regler;
