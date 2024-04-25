@@ -17,12 +17,7 @@ console.log("Data is: ", data)
 
     return (
     <>
-    <header className="flex flex-wrap bg-backgound-color-secondary place-content-left p-2 gap-4">
-        <Image className="h-auto max-w-fit hidden sm:block" src="/logo.svg" alt="Logo" height="80" width="80"/>
-        <h1 className="text-2xl">
-            Dummy header
-        </h1>
-    </header>
+
     <section className="mx-auto px-0 my-10  sm:px-8 lg:max-w-7xl lg:px-3">
         <article className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
             <figure className="flex flex-col w-auto justify-end place-content-right gap-y-2 md:order-2">
@@ -98,9 +93,6 @@ console.log("Data is: ", data)
         </details>
     </section>
 
-    <footer className="flex bg-primary-color">
-        <h2 className="text-xl">Dummy footer</h2>
-    </footer>
     </>
 )
 }
