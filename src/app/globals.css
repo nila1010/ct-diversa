@@ -30,6 +30,20 @@
   --step-4: clamp(2.986rem, 2.42rem + 2.4149cqi, 4.2915rem);
   --step-5: clamp(5rem, 3.9162rem + 4.6231cqi, 7.5rem);
 }
+body {
+  margin: 0 auto;
+  max-width: 1500px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--colors-grey-80);
+}
+
+main {
+  flex-grow: 1;
+  overflow: hidden;
+  height: 100%;
+}
 
 @layer utilities {
   .text-balance {
