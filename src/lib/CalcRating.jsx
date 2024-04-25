@@ -1,36 +1,22 @@
 export const score = (data) => {
   const newArray = data.violations.concat(data.passes);
 
-  const numModerate = newArray
-    .map((vio) => {
-      return vio.impact === "moderate";
-    })
-    .filter(Boolean);
+  const critical = newArray.filter((one) => one.impact === "critical");
 
-  const numCritical = newArray
-    .map((vio) => {
-      return vio.impact === "critical";
-    })
-    .filter(Boolean);
+  const serious = newArray.filter((one) => one.impact === "serious");
 
-  const numMinor = newArray
-    .map((vio) => {
-      return vio.impact === "minor";
-    })
-    .filter(Boolean);
+  const major = critical.concat(serious);
 
-  const numSerious = newArray
-    .map((vio) => {
-      return vio.impact === "serious";
-    })
-    .filter(Boolean);
+  const moderate = newArray.filter((one) => one.impact === "moderate");
 
-  const p2 = numCritical.length + numSerious.length;
-  const p1 = numModerate.length;
-  const p0 = numMinor.length;
+  const minor = newArray.filter((one) => one.impact === "minor");
+
+  const p2 = major.length;
+  const p1 = moderate.length;
+  const p0 = minor.length;
   const total = p2 + p1 + p0;
 
   const res = Math.round(((0.4 * p2 + 0.8 * p1 + p0) / total) * 100);
 
-  return res;
+  return [res, major, moderate, minor];
 };
