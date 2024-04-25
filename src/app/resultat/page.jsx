@@ -17,13 +17,43 @@ export default async function Report() {
 
   //lav samlet score
   const total = score(data);
+  const webScore = total[0];
+  const majorError = total[1];
+  const moderatError = total[2];
+  const minorError = total[3];
 
   return (
-    <main>
-      <h1>Report for {data.url}</h1>
-      <p>Found {data.violations.length} issues</p>
-      {/*  Link til slug side */}
-      <Link href={`/regler/${data.violations[0].id}`}>link</Link>
-    </main>
+    <section className="p-10">
+      <article className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0">
+        <div>
+          <h1 className="text-xl text-state-1">{dummyData.url}</h1>
+          <p className="text-sm max-w-prose">Nedenfor kan du se en raport over de tilgængelighedsprobler vi har fundet. De er opdelt i 3 kategorier hvor kritiske fejl kan forårsage at brugeren ikke kan bruge hjemmesiden. moderete fejl gør det ikke er optimalt for brugeren og de mindre fejl er et eller andet</p>
+        </div>
+        <figure className="place-self-center order-first sm:order-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" fill="currentColor" class="bi bi-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+          </svg>
+        </figure>
+        <div className="w-[70%] sm:w-[50%]">
+          <Image src="/img/placeholder.png" width={dummyData.screenshot.width} height={dummyData.screenshot.height} alt="Billede af hjemmesiden der er blevet skannet" />
+        </div>
+      </article>
+      <article>
+        <details>
+          <summary>{majorError.length} Kritiske fejl</summary>
+          <div></div>
+        </details>
+        <details>
+          <summary>{moderatError.length} Moderate fejl</summary>
+          {moderatError.map((error) => {
+            return <p>{error.id}</p>;
+          })}
+        </details>
+        <details>
+          <summary>{minorError.length} Mindre fejl</summary>
+          <p>her er noget andet</p>
+        </details>
+      </article>
+    </section>
   );
 }
