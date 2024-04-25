@@ -1,6 +1,7 @@
 import { reglerData } from "@/data/reglerData";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Bar from '@/components/Bar';
 
 export async function generateStaticParams() {
   return reglerData.map((regl) => ({
@@ -31,6 +32,7 @@ export default async function Regl({ params }) {
   return (
     <section className="p-10">
       <h1 className="text-2xl">{`${data.name.charAt(0).toUpperCase()}${data.name.slice(1)}`}</h1>
+      <Bar impact={data.impact} />
       <div>
         <h2 className="text-md">Hvem det påvirker:</h2>
         <ul className="flex gap-2">
