@@ -4,10 +4,10 @@ function Footer() {
   return (
     <section className="bg-primary-color flex items-center px-10 py-5 justify-between">
       <div className="shrink-0">
-        <Image alt="Diverse logo" src="logo/icon.svg" width={94} height={94} />
+        <Image alt="Diverse logo" src="/logo/icon.svg" width={94} height={94} />
       </div>
       <div className="shrink sm:shrink-0 ms-5">
-        <ul className="text-error-color text-[1rem] flex gap-3 flex-wrap">
+        <ul role="list" className="text-error-color text-[1rem] flex gap-3 flex-wrap">
           <LinkNavigation path="/#">Vi tilbyder</LinkNavigation>
           <LinkNavigation path="/#">Artikler</LinkNavigation>
           <LinkNavigation path="/#">Priser</LinkNavigation>

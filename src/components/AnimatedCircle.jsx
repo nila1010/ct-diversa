@@ -7,7 +7,7 @@ function AnimatedCircle({ data }) {
     background: `conic-gradient(color-mix(in hsl, red, green calc(${value} * 1%)) ${value * 3.6}deg, var(--colors-brand-beige-00) 0deg)`,
   };
 
-  /*   useEffect(() => {
+  useEffect(() => {
     const counter = setInterval(() => {
       setValue((prevValue) => {
         if (prevValue < data) {
@@ -20,7 +20,7 @@ function AnimatedCircle({ data }) {
     }, 20);
 
     return () => clearInterval(counter);
-  }, []); */
+  }, []);
 
   return (
     <figure className="place-self-center order-first sm:order-none grid place-items-center relative">
