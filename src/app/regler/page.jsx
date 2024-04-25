@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Regler.module.css';
 import simonData from './simon';
+import Link from 'next/link';
 
 function getImpactClassName(impact) {
     let className = '';
@@ -41,17 +42,16 @@ export default function Regler() {
                         </tr>
                     </thead>
                     <tbody>
-{simonData.map((item, index) => (
-  <tr key={item.slug} className={(index % 2 === 0) ? styles.tableRowEven : ''}>
+                    {simonData.map((item) => (
+  <tr key={item.id} className={(item.id % 2 === 0) ? styles.tableRowEven : ''}>
     <td className={styles.dataCell}>{item.name}</td>
     <td className={`${styles.dataCell} ${styles.descColumn}`}>{item.shortDesc}</td>
     <td className={`${styles.dataCell} ${getImpactClassName(item.impact)}`}>{item.impact}</td>
     <td className={`${styles.dataCell} ${styles.lastColumn}`}>
-      <a className={styles.link} href={`/rules/${item.slug}`}>Read more</a>
+    <Link className={styles.link} href={`/regler/${item.id}`}>læs mere om fejlen</Link>
     </td>
   </tr>
 ))}
-
 
             </tbody>
                 </table>

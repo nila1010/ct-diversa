@@ -1,5 +1,6 @@
 const simonData = [
   {
+    id:0,
     name: "area-alt",
     shortDesc: "Ensures <area> elements of image maps have alternate text ",
     longDesc: "",
@@ -12,6 +13,7 @@ const simonData = [
     affect: ["", "", "", ""],
   },
   {
+    id:1,
     name: "aria-allowed-attr",
     shortDesc: "Ensures an element's role supports its ARIA attributes",
     longDesc: "",
@@ -24,6 +26,7 @@ const simonData = [
     affect: ["", "", "", ""],
   },
   {
+    id:2,
     name: "area-alt",
     shortDesc: "Ensures <area> elements of image maps have alternate text ",
     longDesc: "",
@@ -36,6 +39,7 @@ const simonData = [
     affect: ["", "", "", ""],
   },
   {
+    id:3,
     name: "aria-allowed-attr",
     shortDesc: "Ensures an element's role supports its ARIA attributes",
     longDesc: "",
@@ -48,6 +52,7 @@ const simonData = [
     affect: ["", "", "", ""],
   },
   {
+    id:4,
     name: "aria-braille-equivalent",
     shortDesc: "Ensure aria-braillelabel and aria-brailleroledescription have a non-braille equivalent",
     longDesc: "",
@@ -60,6 +65,7 @@ const simonData = [
     affect: ["", "", "", ""],
   },
   {
+    id:5,
     name: "aria-conditional-attr",
     shortDesc: "Ensures ARIA attributes are used as described in the specification of the element's role",
     longDesc: "",
@@ -72,6 +78,7 @@ const simonData = [
     affect: ["", "", "", ""],
   },
   {
+    id:6,
     name: "aria-deprecated-role",
     shortDesc: "Ensures elements do not use deprecated roles",
     longDesc: "",
@@ -84,6 +91,7 @@ const simonData = [
     affect: ["", "", "", ""],
   },
   {
+    id:7,
     name: "form-field-multiple-labels",
     shortDesc: "Ensures form field does not have multiple label elements",
     longDesc: "",

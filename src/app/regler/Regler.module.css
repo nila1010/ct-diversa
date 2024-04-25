@@ -8,8 +8,8 @@
 
 @media (max-width: 768px) {
     .gridContainer {
-        grid-template-columns: 1fr;  /* One column on smaller screens */
-        margin: 10% 2% 0 2%; /* Smaller margins on smaller screens */
+        grid-template-columns: 1fr;  
+        margin: 10% 2% 0 2%;
     }
     .table {
         border-collapse: separate;
@@ -21,7 +21,7 @@
     }
 
         .descColumn {
-            display: none;  /* Hides description column on mobile devices */
+            display: none; 
         }
     }
     
@@ -82,16 +82,16 @@
 }
 
 
-/* Regler.module.css */
+
 .impactCritical {
-    color: var(--colors-brand-orange-70); /* Make sure this variable is defined */
+    color: var(--colors-brand-orange-70); 
 }
 
 .impactModerate {
-    color: var(--colors-brand-yellow-100); /* Make sure this variable is defined */
+    color: var(--colors-brand-yellow-100); 
 }
 
 .impactMinor {
-    color: var(--colors-brand-turquoise-50); /* Make sure this variable is defined */
+    color: var(--colors-brand-turquoise-50);
 }
 
