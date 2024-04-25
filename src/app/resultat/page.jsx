@@ -1,10 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link';
+import Butten from '@/components/Butten';
 // import {useState, useEffect} from 'react'
 
 export const revalidate = 1800;
 
 export default function Resultat() {
+
 
 const data = require('./dummyData.json')
 const violations = [...data.violations]
@@ -12,13 +14,13 @@ const violations = [...data.violations]
 
 // })
 // const critical = violations[0].impact
-console.log("Data is: ", data)
+// console.log("Data is: ", data)
 // console.log(critical)
 
     return (
     <>
 
-    <section className="mx-auto px-0 my-10  sm:px-8 lg:max-w-7xl lg:px-3">
+    <section className="mx-auto px-0 my-10">
         <article className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
             <figure className="flex flex-col w-auto justify-end place-content-right gap-y-2 md:order-2">
                 <Image className="w-auto object-contain" src="/dummyImg.svg" alt="Logo" width="300" height="300" />
@@ -32,7 +34,7 @@ console.log("Data is: ", data)
         </article>
     </section>
 
-    <section className='flex flex-col gap-y-6 my-14 mx-auto px-0 lg:max-w-7xl sm:px-3'>
+    <section className='flex flex-col gap-y-6 my-14 px-0'>
         <h2 className='text-2xl'>Fuld raport </h2>
         <details className='bg-state-3-light'>
             <summary className='flex gap-3 justify-between text-xl p-6 border-solid border-4 rounded border-state-3 after:content-[">"]'><div><span>{violations.length}</span> kritiske fejl</div></summary>
