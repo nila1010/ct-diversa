@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Regler.module.css';
 import simonData from './simon';
 import Link from 'next/link';
+import Butten from "@/components/Butten";
 
 function getImpactClassName(impact) {
     let className = '';
@@ -48,7 +49,9 @@ export default function Regler() {
     <td className={`${styles.dataCell} ${styles.descColumn}`}>{item.shortDesc}</td>
     <td className={`${styles.dataCell} ${getImpactClassName(item.impact)}`}>{item.impact}</td>
     <td className={`${styles.dataCell} ${styles.lastColumn}`}>
-    <Link className={styles.link} href={`/regler/${item.id}`}>læs mere om fejlen</Link>
+    <Butten variant="input" path="/">
+            Læs mere om fejlen her
+          </Butten>
     </td>
   </tr>
 ))}
