@@ -50,3 +50,11 @@ main {
     text-wrap: balance;
   }
 }
+
+.gradient {
+  rotate: -90deg;
+  --color: color-mix(in hsl, red, green calc(var(--percent) * 1%));
+  --percent: 0;
+  --angle: calc(var(--percent) * 1.8deg);
+  background: conic-gradient(var(--color) var(--angle), var(--colors-brand-beige-00) 0deg);
+}
