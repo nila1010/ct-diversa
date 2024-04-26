@@ -1,7 +1,7 @@
 import { reglerData } from "@/data/reglerData";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import Bar from '@/components/Bar';
+import Bar from "@/components/Bar";
 
 export async function generateStaticParams() {
   return reglerData.map((regl) => ({
@@ -31,7 +31,7 @@ export default async function Regl({ params }) {
 
   return (
     <section className="p-10">
-      <h1 className="text-2xl">{`${data.name.charAt(0).toUpperCase()}${data.name.slice(1)}`}</h1>
+      <h1 className="text-xl">{`${data.name.charAt(0).toUpperCase()}${data.name.slice(1)}`}</h1>
       <Bar impact={data.impact} />
       <div>
         <h2 className="text-md">Hvem det påvirker:</h2>
@@ -46,11 +46,11 @@ export default async function Regl({ params }) {
         </ul>
       </div>
       <article className="mt-10">
-        <h2 className="text-xl">Beskrivelse:</h2>
+        <h2 className="text-lg">Beskrivelse:</h2>
         <p className="text-sm max-w-prose">{data.longDesc}</p>
       </article>
       <article className="mt-10">
-        <h2 className="text-xl">Hvorfor er det vigtigt?</h2>
+        <h2 className="text-lg">Hvorfor er det vigtigt?</h2>
         <p className="text-sm max-w-prose">{data.whyDesc}</p>
       </article>
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
