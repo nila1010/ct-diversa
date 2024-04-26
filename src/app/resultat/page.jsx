@@ -2,12 +2,14 @@ import Image from "next/image";
 import { score } from "@/lib/CalcRating";
 import AnimatedCircle from "@/components/AnimatedCircle";
 import ListError from "@/components/ListError";
+import { dummyData } from "@/data/dummy";
 export const revalidate = 1800;
 
 export default async function Report({ searchParams }) {
-  const params = new URLSearchParams(searchParams);
+  /*  const params = new URLSearchParams(searchParams);
   const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
-  const data = await response.json();
+  const data = await response.json(); */
+  const data = dummyData;
 
   const total = score(data);
   const webScore = total[0];
