@@ -7,10 +7,9 @@ export default function ListError({ error }) {
         <h3 className="text-lg">{`${error.id.charAt(0).toUpperCase()}${error.id.slice(1)}`}</h3>
         <p className="text-sm">{error.help}</p>
       </div>
-      <div className="flex gap-5 items-center">
-        <p className="text-md">{error.impact}</p>
-        <Butten variant={error}>Læs mere</Butten>
-      </div>
+      <Butten variant="listbtn" path={`regler/${error.id}`}>
+        Læs mere
+      </Butten>
     </div>
   );
 }

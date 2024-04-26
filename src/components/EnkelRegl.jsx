@@ -8,8 +8,8 @@ function EnkelRegl({ data, index }) {
       <h3 className="text-sm ">{data.shortDesc}</h3>
       <h3 className="text-sm ">{data.impact}</h3>
       <div className="col-start-1 col-span-4 sm:col-start-4 sm:col-span-1">
-        <Butten variant="regl">
-          <Link href={`/regler/${data.name}`}>Læs mere om reglen</Link>
+        <Butten variant="regl" path={`regler/${data.name}`}>
+          Læs mere om reglen
         </Butten>
       </div>
     </div>

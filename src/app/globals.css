@@ -45,6 +45,26 @@ main {
   height: 100%;
 }
 
+details[open] {
+  img {
+    transition: all 0.5s;
+    rotate: 90deg;
+  }
+}
+
+[popover] {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

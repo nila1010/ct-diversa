@@ -26,7 +26,7 @@ export default async function Report({ searchParams }) {
         </div>
         <AnimatedCircle data={webScore} />
         <div className="w-[70%] sm:w-[50%]">
-          <Image src="/img/placeholder.png" width={data.screenshot.width} height={data.screenshot.height} alt="Billede af hjemmesiden der er blevet skannet" />
+          <Image src={data.screenshot.url} width={data.screenshot.width} height={data.screenshot.height} alt="Billede af hjemmesiden der er blevet skannet" />
         </div>
       </article>
       <article className="grid gap-3 mt-10 w-full sm:w-[70vw]">

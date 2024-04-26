@@ -1,4 +1,7 @@
 import Butten from "@/components/Butten";
+import Popoverindex from "@/components/Popoverindex";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <section className="grid place-content-center text-center gap-5 m-10">
@@ -8,9 +11,10 @@ export default function Home() {
         <label htmlFor="form_url" className="flex flex-wrap px-10 justify-center gap-2 sm:gap-0">
           <p className="sr-only">Skriv din url her</p>
           <input className="rounded-l border-2 border-state-3 p-2 flex-0 w-full sm:flex-1" type="url" name="url" id="form_url" required placeholder="https://URL..." />
-          <Butten variant="input">Analyser</Butten>
+          <button className="bg-state-3 py-2 px-5 rounded-r text-lg hover:text-backgound-color-secondary transition">Analyser</button>
         </label>
       </form>
+      <Popoverindex />
     </section>
   );
 }
