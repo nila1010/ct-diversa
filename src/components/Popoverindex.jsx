@@ -1,7 +1,7 @@
 function Popoverindex() {
   return (
     <div className="flex justify-center">
-      <button popovertarget="pop" className="bg-state-1 py-2 px-4 rounded">
+      <button popovertarget="pop" className="py-2 px-5 text-md relative before:rounded before:absolute before:inset-0 before:content-[''] before:border-2 before:border-state-1 before:-z-50 after:absolute after:inset-0 after:content-[''] after:-z-50 after:bg-state-1 after:w-full after:h-full hover:after:scale-y-[0.8] hover:after:scale-x-[0.95] after:transition after:duration-500 after:ease after:rounded">
         Hvad tester vi for?
       </button>
       <div popover="manual" id="pop" className="absolute bottom-[-392px] max-w-[400px] bg-state-1 rounded px-5 pb-3">
