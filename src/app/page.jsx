@@ -1,6 +1,4 @@
-import Butten from "@/components/Butten";
 import Popoverindex from "@/components/Popoverindex";
-import Link from "next/link";
 
 export default function Home() {
   return (
