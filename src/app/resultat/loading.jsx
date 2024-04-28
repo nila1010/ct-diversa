@@ -10,10 +10,10 @@ function Loading() {
           <p className="text-sm max-w-prose">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui dicta illo eum id aspernatur totam, dolorem hic iure quod laborum eligendi reiciendis consequatur officiis. Minus, fugit laudantium! Quaerat, rem eos.</p>
         </div>
         <div className="place-self-center order-first sm:order-none grid place-items-center relative">
-          <Skeleton width={250} height={250} circle={true} baseColor="oklch(85.55% 0.1311 213)" highlightColor="oklch(92.09% 0.0739 211)" />
+          <Skeleton height={250} width={250} circle={true} />
         </div>
         <div className="w-[70%] sm:w-[50%]">
-          <Skeleton height={200} width={"100%"} baseColor="oklch(85.55% 0.1311 213)" highlightColor="oklch(92.09% 0.0739 211)" />
+          <Skeleton height={200} width={"100%"} />
         </div>
       </article>
       <article className="grid gap-3 mt-10 w-full sm:w-[70vw]">
