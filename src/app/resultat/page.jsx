@@ -21,7 +21,7 @@ export default async function Report({ searchParams }) {
     <section className="p-10">
       <article className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0">
         <div>
-          <h1 className="text-xl text-state-1">{data.url}</h1>
+          <h1 className="text-xl">{data.url}</h1>
           <p className="text-sm max-w-prose">Nedenfor kan du se en raport over de tilgængelighedsprobler vi har fundet. De er opdelt i 3 kategorier hvor kritiske fejl kan forårsage at brugeren ikke kan bruge hjemmesiden. moderete fejl gør det ikke er optimalt for brugeren og de mindre fejl er et eller andet</p>
         </div>
         <AnimatedCircle data={webScore} />
