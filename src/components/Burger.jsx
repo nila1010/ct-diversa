@@ -13,7 +13,7 @@ function Burger() {
   return (
     <>
       {isOpen && (
-        <ul onClick={closeMenu} className="absolute top-[65%] right-0 bg-backgound-color-secondary z-10 grid gap-2 pt-10 px-8 pb-4 text-md rounded-b animate__bounceInDown animate__animated">
+        <ul onClick={closeMenu} className="absolute w-full top-[80%] right-0 justify-center text-xl text-center bg-backgound-color-secondary grid gap-2 pt-10 px-8 pb-12 rounded-b animate__bounceInDown animate__animated">
           <Linknavigation path="/#">Check site</Linknavigation>
           <Linknavigation path="/regler">Regler</Linknavigation>
         </ul>
