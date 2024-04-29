@@ -34,6 +34,7 @@
   margin-bottom: 5%;
   
 }.paragraph {
+
   width: 80%;  
   max-width: 600px;
   min-width: 300px; 
@@ -47,10 +48,7 @@
     overflow-x: auto; 
     font-size: var(--step-0);
     padding: 10px;
-    word-wrap: break-word;
-}
-.table td:last-child {
-    width: 10%;
+   
 }
 
 .headerCell, .dataCell {
@@ -65,12 +63,9 @@
 .tableRowEven {
     background-color:var(--colors-brand-beige-10);
 }
-
 .lastColumn {
-    max-width: 150px;  /* Adjust as needed */
-    overflow: hidden;  /* Keeps the content within the cell */
-    text-overflow: ellipsis;  /* Adds an ellipsis if the text overflows */
-    white-space: nowrap;
+    /* background-color: var(--colors-brand-orange-70);   */
+    text-align: center; 
 }
 
 /* .lastColumn:hover {
