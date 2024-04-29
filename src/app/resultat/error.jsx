@@ -1,7 +1,6 @@
 "use client";
 import Butten from "@/components/Butten";
 import Image from "next/image";
-import Link from "next/link";
 function Error() {
   return (
     <section className="bg-state-3 p-10 grid text-center sm:grid-cols-[2fr_1fr] sm:text-left">
