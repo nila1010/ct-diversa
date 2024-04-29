@@ -4,14 +4,19 @@ import AnimatedCircle from "@/components/AnimatedCircle";
 
 export const revalidate = 1800;
 
-export default function Resultat() {
-  const data = require("./dummyData.json");
-  const violations = data.violations;
-  const critical = violations.filter((one) => one.impact === "critical");
-  const serious = violations.filter((one) => one.impact === "serious");
-  const major = critical.concat(serious);
-  const moderate = violations.filter((one) => one.impact === "moderate");
-  const minor = violations.filter((one) => one.impact === "minor");
+export default async function Resultat({searchParams}) {
+    const params = new URLSearchParams(searchParams);
+    const response = await fetch(
+      `https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`,
+    );
+    const data = await response.json();
+
+    const violations = data.violations;
+    const critical = violations.filter(one => one.impact === 'critical')
+    const serious = violations.filter(one => one.impact === 'serious')
+    const major = critical.concat(serious)
+    const moderate = violations.filter(one => one.impact === 'moderate')
+    const minor = violations.filter(one => one.impact === 'minor')
 
   return (
     <>
@@ -25,7 +30,7 @@ export default function Resultat() {
             <figure className="flex flex-col place-content-center gap-y-2 md:order-1">
               <h1 className="text-xl text-state-1">{data.url}</h1>
               <p className="text-pretty"></p>
-              <Image className="w-auto object-contain" src="/dummyImg.svg" alt="Logo" width={data.screenshot.width} height={data.screenshot.height} />
+              <Image className="w-auto object-contain" src={data.screenshot.url} alt="Logo" width={data.screenshot.width} height={data.screenshot.height} />
             </figure>
           </article>
         </section>
