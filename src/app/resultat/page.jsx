@@ -1,22 +1,24 @@
 import Image from "next/image";
 import ListItem from "@/components/ListItem";
 import AnimatedCircle from "@/components/AnimatedCircle";
+import { score } from "@/lib/CalcRating";
 
 export const revalidate = 1800;
 
-export default async function Resultat({searchParams}) {
-    const params = new URLSearchParams(searchParams);
-    const response = await fetch(
-      `https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`,
-    );
-    const data = await response.json();
+export default async function Resultat({ searchParams }) {
+  const params = new URLSearchParams(searchParams);
+  const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
+  const data = await response.json();
 
-    const violations = data.violations;
-    const critical = violations.filter(one => one.impact === 'critical')
-    const serious = violations.filter(one => one.impact === 'serious')
-    const major = critical.concat(serious)
-    const moderate = violations.filter(one => one.impact === 'moderate')
-    const minor = violations.filter(one => one.impact === 'minor')
+  const violations = data.violations;
+  const critical = violations.filter((one) => one.impact === "critical");
+  const serious = violations.filter((one) => one.impact === "serious");
+  const major = critical.concat(serious);
+  const moderate = violations.filter((one) => one.impact === "moderate");
+  const minor = violations.filter((one) => one.impact === "minor");
+
+  const total = score(data);
+  const webScore = total[0];
 
   return (
     <>
@@ -24,7 +26,7 @@ export default async function Resultat({searchParams}) {
         <section className="mb-10">
           <article className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
             <figure className="flex flex-col w-auto place-content-right gap-y-2 md:order-2">
-              <AnimatedCircle />
+              <AnimatedCircle data={webScore} />
               <h2 className="w-auto text-md text-center">Overall score</h2>
             </figure>
             <figure className="flex flex-col place-content-center gap-y-2 md:order-1">
