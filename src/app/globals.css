@@ -31,8 +31,6 @@
   --step-5: clamp(5rem, 3.9162rem + 4.6231cqi, 7.5rem);
 }
 body {
-  margin: 0 auto;
-  max-width: 1500px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;

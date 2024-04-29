@@ -25,13 +25,13 @@ export default async function Resultat({ searchParams }) {
       <div className="m-10">
         <section className="mb-10">
           <article className="grid grid-cols-1 gap-x-12 gap-y-8 md:grid-cols-2">
-            <figure className="flex flex-col w-auto place-content-right gap-y-2 md:order-2">
+            <figure className="flex flex-col w-auto place-content-center gap-y-2 md:order-2">
               <AnimatedCircle data={webScore} />
               <h2 className="w-auto text-md text-center">Overall score</h2>
             </figure>
-            <figure className="flex flex-col place-content-center gap-y-2 md:order-1">
+            <figure className="flex flex-col gap-y-2 md:order-1">
               <h1 className="text-xl text-state-1">{data.url}</h1>
-              <p className="text-pretty"></p>
+              <p className="text-pretty">Nedenfor kan du se en raport over de tilgængelighedsprobler vi har fundet. De er opdelt i 3 kategorier hvor kritiske fejl kan forårsage at brugeren ikke kan bruge hjemmesiden. moderete fejl gør det ikke er optimalt for brugeren og de mindre fejl er et eller andet</p>
               <Image className="w-auto object-contain" src={data.screenshot.url} alt="Logo" width={data.screenshot.width} height={data.screenshot.height} />
             </figure>
           </article>
