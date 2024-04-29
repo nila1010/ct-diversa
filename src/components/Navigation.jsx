@@ -20,7 +20,7 @@ function Navigation() {
     };
   }, []);
   return (
-    <nav className="relative flex justify-between py-5 px-10 items-center bg-backgound-color-secondary">
+    <nav className="relative flex justify-between py-5 px-10 items-center max-w-[1500px] m-auto">
       <Link href="/#">
         <div className="flex gap-5">
           <Image alt="Diverse logo" src="/logo/diversa_icon.svg" width={49} height={49} />

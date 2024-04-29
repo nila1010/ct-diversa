@@ -17,11 +17,11 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="noindex"></meta>
       </head>
       <body className={`${poppins.className} bg-background-color-primary`}>
-        <header className="relative z-10">
+        <header className="relative z-10 bg-backgound-color-secondary">
           <Navigation />
         </header>
-        <main className="grid">{children}</main>
-        <footer>
+        <main className="grid max-w-[1500px] m-auto">{children}</main>
+        <footer className="bg-primary-color">
           <Footer />
         </footer>
       </body>

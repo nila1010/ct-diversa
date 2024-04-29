@@ -2,7 +2,7 @@ import Image from "next/image";
 import Linknavigation from "./Linknavigation";
 function Footer() {
   return (
-    <section className="bg-primary-color flex items-center px-10 py-5 justify-between">
+    <section className="flex items-center px-10 py-5 justify-between max-w-[1500px] m-auto">
       <div className="shrink-0">
         <Image alt="Diverse logo" src="/logo/icon.svg" width={94} height={94} />
       </div>
