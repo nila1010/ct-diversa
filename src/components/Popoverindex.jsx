@@ -8,8 +8,8 @@ function Popoverindex() {
         <div className="flex place-content-center gap-5 ">
         <p className="text-left">
   Vi sikrer jeres indholds tilgængelighed ved at teste efter WCAG 2.1 guidelines på Level A, AA, AAA og bedste praksis. For mere detaljeret information, besøg
-  <span class="mr-2"></span>
-  <a href="https://dequeuniversity.com/rules/axe/html/4.9" target="_blank" class="text-state-3 hover:text-state-3-light underline">
+  <span className="mr-2"></span>
+  <a href="https://dequeuniversity.com/rules/axe/html/4.9" target="_blank" className="text-state-3 hover:text-state-3-light underline">
     Deque University
   </a>.
 </p>
