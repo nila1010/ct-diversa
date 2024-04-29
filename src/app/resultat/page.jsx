@@ -30,7 +30,7 @@ export default async function Resultat({ searchParams }) {
               <h2 className="w-auto text-md text-center">Overall score</h2>
             </figure>
             <figure className="flex flex-col gap-y-2 md:order-1">
-              <h1 className="text-xl text-state-1">{data.url}</h1>
+              <h1 className="text-xl">{data.url}</h1>
               <p className="text-pretty">Nedenfor kan du se en raport over de tilgængelighedsprobler vi har fundet. De er opdelt i 3 kategorier hvor kritiske fejl kan forårsage at brugeren ikke kan bruge hjemmesiden. moderete fejl gør det ikke er optimalt for brugeren og de mindre fejl er et eller andet</p>
               <Image className="w-auto object-contain" src={data.screenshot.url} alt="Logo" width={data.screenshot.width} height={data.screenshot.height} />
             </figure>
@@ -40,8 +40,8 @@ export default async function Resultat({ searchParams }) {
         <section className="flex flex-col gap-y-6 my-14 px-0">
           <h3 className="text-xl">Fuld raport </h3>
           {major.length != 0 && (
-            <details className="bg-state-3-light">
-              <summary className='flex gap-3 justify-between text-lg p-6 border-solid border-4 rounded border-state-3 after:content-[">"]'>
+            <details className="bg-state-3-light border-state-3 border-4 rounded border-solid cursor-pointer">
+              <summary className='flex gap-3 bg-state-3 justify-between text-lg p-6 after:content-[">"]'>
                 <div>
                   <span>{major.length}</span> kritiske fejl
                 </div>
@@ -54,8 +54,8 @@ export default async function Resultat({ searchParams }) {
             </details>
           )}
           {moderate.length != 0 && (
-            <details className="bg-state-2-light">
-              <summary className='flex gap-3 justify-between text-lg p-6 border-solid border-4 rounded border-state-2 after:content-[">"]'>
+            <details className="bg-state-2-light border-state-2 border-4 rounded border-solid cursor-pointer">
+              <summary className='flex gap-3 bg-state-2 justify-between text-lg p-6 after:content-[">"]'>
                 <div>
                   <span>{moderate.length}</span> moderate fejl
                 </div>
@@ -68,8 +68,8 @@ export default async function Resultat({ searchParams }) {
             </details>
           )}
           {minor.length != 0 && (
-            <details className="bg-state-1-light">
-              <summary className='flex gap-3 justify-between text-lg p-6 border-solid border-4 rounded border-state-1 after:content-[">"]'>
+            <details className="bg-state-1-light border-state-1 rounded border-solid border-4 cursor-pointer">
+              <summary className='flex gap-3 bg-state-1 justify-between text-lg p-6 after:content-[">"]'>
                 <div>
                   <span>{minor.length}</span> mindre fejl
                 </div>
