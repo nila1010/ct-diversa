@@ -30,7 +30,7 @@ export default async function Resultat({ searchParams }) {
               <h2 className="w-auto text-md text-center">Overall score</h2>
             </figure>
             <figure className="flex flex-col gap-y-2 md:order-1">
-              <h1 className="text-xl text-state-1">{data.url}</h1>
+              <h1 className="text-xl">{data.url}</h1>
               <p className="text-pretty">Nedenfor kan du se en raport over de tilgængelighedsprobler vi har fundet. De er opdelt i 3 kategorier hvor kritiske fejl kan forårsage at brugeren ikke kan bruge hjemmesiden. moderete fejl gør det ikke er optimalt for brugeren og de mindre fejl er et eller andet</p>
               <Image className="w-auto object-contain" src={data.screenshot.url} alt="Logo" width={data.screenshot.width} height={data.screenshot.height} />
             </figure>
