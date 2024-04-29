@@ -16,7 +16,8 @@ export const score = (data) => {
   const p0 = minor.length;
   const total = p2 + p1 + p0;
 
-  const res = Math.round(((0.4 * p2 + 0.8 * p1 + p0) / total) * 100);
+  const calc = Math.round(((0.4 * p2 + 0.8 * p1 + p0) / total) * 100);
+  const res = !calc ? 100 : calc;
 
   return [res, major, moderate, minor];
 };
