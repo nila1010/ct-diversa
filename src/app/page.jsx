@@ -11,8 +11,10 @@ export default function Home() {
           <input className="rounded-l border-2 border-state-2 p-2 flex-0 w-full sm:flex-1" type="url" name="url" id="form_url" required placeholder="https://URL..." />
           <Butten variant="primaryRoundedR">Analyser</Butten>
         </label>
-        <Popoverindex />
       </form>
+      <div className="flex justify-center gap-x-10 gap-y-5 items-start flex-wrap">
+        <Popoverindex />
+      </div>
     </section>
   );
 }
