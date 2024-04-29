@@ -8,7 +8,7 @@ const ReglerTable = () => (
         <table className={styles.table}>
             <thead>
                 <tr>
-                    <th className={styles.headerCell}>Navn på regel</th>
+                    <th className={styles.headerCell}>Title</th>
                     <th className={`${styles.headerCell} ${styles.descColumn}`}>Beskrivelse</th>
                     <th className={styles.headerCell}>Vigtighed</th>
                 </tr>
