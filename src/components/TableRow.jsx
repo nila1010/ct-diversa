@@ -9,10 +9,8 @@ const TableRow = ({ item, index }) => (
         <td className={styles.dataCell}>{item.name}</td>
         <td className={`${styles.dataCell} ${styles.descColumn}`}>{item.shortDesc}</td>
         <td className={`${styles.dataCell} ${getImpactClassName(item.impact)}`}>{item.impact}</td>
-        <td className={`${styles.dataCell} ${styles.lastColumn}`}>
-            <Link legacyBehavior href={`/regler/${item.name.replace(/\s+/g, '-').toLowerCase()}`}>
-                <a><Butten variant="input">Læs mere om fejlen her</Butten></a>
-            </Link>
+       <td className={`${styles.dataCell} ${styles.lastColumn}`} style={{ position: 'relative', zIndex: 1 }}>
+            <Butten variant="primary" href={`/regler/${item.name.replace(/\s+/g, '-').toLowerCase()}`}>Læs om fejlen</Butten>
         </td>
     </tr>
 );
