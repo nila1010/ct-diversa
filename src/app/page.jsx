@@ -5,7 +5,7 @@ import Popoverindex from "@/components/Popoverindex";
 import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
-  let prev;
+  let prev = [];
   if (typeof window !== "undefined") {
     prev = JSON.parse(localStorage.getItem("Prev Search"));
   }
