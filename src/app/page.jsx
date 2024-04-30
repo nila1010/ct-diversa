@@ -1,4 +1,3 @@
-import Butten from "@/components/Butten";
 import Popoverindex from "@/components/Popoverindex";
 export default function Home() {
   return (
@@ -9,9 +8,7 @@ export default function Home() {
         <label htmlFor="form_url" className="flex flex-wrap px-10 justify-center gap-2 sm:gap-0">
           <p className="sr-only">Skriv din url her</p>
           <input className="rounded-l border-2 border-state-2 p-2 flex-0 w-full sm:flex-1" type="url" name="url" id="form_url" required placeholder="https://URL..." />
-          <Butten variant="primaryRoundedR" path="resultat/">
-            Analyser
-          </Butten>
+          <button className="py-2 px-5 text-lg relative before:rounded-r before:absolute before:inset-0 before:content-[''] before:bg-state-1 before:scale-x-[0] hover:before:scale-x-[1] before:transition before:duration-500 before:ease-out before:origin-left before:-z-10 after:bg-state-2 after:-z-20 after:content-[''] after:absolute after:inset-0 after:rounded-r">Analyser</button>
         </label>
       </form>
       <div className="flex justify-center gap-x-10 gap-y-5 items-start flex-wrap">
