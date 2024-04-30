@@ -22,7 +22,7 @@
   --colors-grey-100: rgba(0, 0, 0, 1);
 
   /*FONTSIZE*/
-  --step--1: clamp(0.6944rem, 0.6487rem + 0.2312cqi, 1.125rem);
+  --step--1: clamp(0.4944rem, 0.6487rem + 0.2312cqi, 1.125rem);
   --step-0: clamp(1rem, 0.9458rem + 0.2312cqi, 1.125rem);
   --step-1: clamp(1.2rem, 1.1106rem + 0.3815cqi, 1.4063rem);
   --step-2: clamp(1.44rem, 1.3022rem + 0.5879cqi, 1.7578rem);

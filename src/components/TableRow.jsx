@@ -10,7 +10,7 @@ const TableRow = ({ item, index }) => (
         <td className="relative max-w-[40ch] max-sm:before:content-['Beskrivelse:'] before:font-bold before:text-md before:absolute before:inset-0 max-sm:pt-[30px] max-sm:pb-3 before:underline-offset-4 before:underline">{item.shortDesc}</td>
         <td className={`relative max-sm:before:content-['Vigtighed:'] before:font-bold before:text-md before:absolute before:inset-0 max-sm:pt-[30px] max-sm:pb-3 before:underline-offset-4 before:underline`} ><span className={getImpactClassName(item.impact)}>{item.impact}</span></td>
 
-        <td className={`${styles.dataCell} ${styles.lastColumn} py-2 px-5 text-sm relative z-0 cursor-pointer before:rounded before:absolute before:inset-0 before:content-[''] before:outline before:outline-state-3 before:-z-50 after:absolute after:inset-0 after:content-[''] after:-z-50 after:bg-state-3 hover:after:scale-y-[0.9] hover:after:scale-x-[0.95] after:transition after:duration-500 after:ease after:rounded`}>
+        <td className={`${styles.dataCell} ${styles.lastColumn} flex z-10 py-2 px-5 text-sm relative before:absolute before:inset-0 before:content-[''] before:rounded before:bg-state-1 before:scale-x-[0] hover:before:scale-x-[1] before:transition before:duration-500 before:ease-out before:origin-left before:-z-10 after:bg-state-2 after:-z-20 after:content-[''] after:absolute after:inset-0 after:rounded`}>
             <Butten variant="" path={`regler/${item.name.replace(/\s+/g, '-').toLowerCase()}`}>Læs om fejlen</Butten>
         </td>
     </tr>

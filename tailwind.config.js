@@ -3,6 +3,7 @@ module.exports = {
   content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     fontSize: {
+      ss: "var(--step--1",
       sm: "var(--step-0)",
       md: "var(--step-1)",
       lg: "var(--step-2)",
