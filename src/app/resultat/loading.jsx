@@ -17,7 +17,7 @@ function Loading() {
         </div>
       </article>
       <article className="grid gap-3 mt-10 w-full sm:w-[70vw]">
-        <Skeleton height={80} baseColor="oklch(72.07% 0.2317 44)" highlightColor="oklab(72.1%, 33%, 32%)" />
+        <Skeleton height={80} baseColor="oklch(72.07% 0.2317 44)" highlightColor="oklch(91.7% 0.18387 44.119)" />
         <Skeleton height={80} baseColor="oklch(81.48% 0.1931 95)" highlightColor="oklch(93.26% 0.1523 98)" duration={1.6} />
         <Skeleton height={80} baseColor="oklch(85.55% 0.1311 213)" highlightColor="oklch(92.09% 0.0739 211)" duration={1.7} />
       </article>
