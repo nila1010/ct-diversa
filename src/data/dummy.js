@@ -1,4 +1,4 @@
-const dummyData = {
+export const dummyData = {
   url: "https://www.kea.dk/",
   tags: ["wcag21a", "wcag21aa", "best-practice"],
   timestamp: "2024-04-18T15:08:21.568Z",
