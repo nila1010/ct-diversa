@@ -5,8 +5,9 @@ const variants = {
   regl: "bg-state-3 py-2 px-5 rounded-r text-sm hover:text-backgound-color-secondary transition w-full flex text-center justify-center",
   listbtn: "bg-state-3 py-1 px-3 rounded text-md hover:text-backgound-color-secondary transition",
   primary: "py-2 px-5 text-lg relative before:absolute before:inset-0 before:content-[''] before:rounded before:bg-state-1 before:scale-x-[0] hover:before:scale-x-[1] before:transition before:duration-500 before:ease-out before:origin-left before:-z-10 after:bg-state-2 after:-z-20 after:content-[''] after:absolute after:inset-0 after:rounded",
-  secondary: "py-2 px-5 text-lg relative before:absolute before:inset-0 before:content-[''] before:bg-state-2 before:scale-x-[0] hover:before:scale-x-[1] before:transition before:duration-500 before:ease-out before:origin-left before:-z-10 after:bg-state-1 after:-z-20 after:content-[''] after:absolute after:inset-0",
+  primarySmall: "py-1 px-2 text-sm relative before:absolute before:inset-0 before:content-[''] before:rounded before:bg-state-1 before:scale-x-[0] hover:before:scale-x-[1] before:transition before:duration-500 before:ease-out before:origin-left before:-z-10 after:bg-state-2 after:-z-20 after:content-[''] after:absolute after:inset-0 after:rounded",
   primaryRoundedR: "py-2 px-5 text-lg relative before:rounded-r before:absolute before:inset-0 before:content-[''] before:bg-state-1 before:scale-x-[0] hover:before:scale-x-[1] before:transition before:duration-500 before:ease-out before:origin-left before:-z-10 after:bg-state-2 after:-z-20 after:content-[''] after:absolute after:inset-0 after:rounded-r",
+  secondary: "py-2 px-5 text-lg relative before:absolute before:inset-0 before:content-[''] before:bg-state-2 before:scale-x-[0] hover:before:scale-x-[1] before:transition before:duration-500 before:ease-out before:origin-left before:-z-10 after:bg-state-1 after:-z-20 after:content-[''] after:absolute after:inset-0",
 };
 
 function Linkbutten({ children, variant, path }) {
