@@ -10,7 +10,7 @@ export default async function Resultat({ searchParams }) {
   const params = new URLSearchParams(searchParams);
   const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
   const data = await response.json();
-
+  
   const violations = data.violations;
   const critical = violations.filter((one) => one.impact === "critical");
   const serious = violations.filter((one) => one.impact === "serious");
@@ -30,7 +30,7 @@ export default async function Resultat({ searchParams }) {
               <h3 className="w-auto text-md text-center">Overall score</h3>
             </div>
             <div className="flex flex-col text-pretty gap-y-4 px-0 sm:order-1">
-              <h2 className="text-xl w-full">{data.url}</h2>
+              <h2 className="text-xl w-full hyphens-auto">{data.url}</h2>
               <p className="text-sm">Nedenfor kan du se en raport over de tilgængelighedsprobler vi har fundet. De er opdelt i 3 kategorier hvor kritiske fejl kan forårsage at brugeren ikke kan bruge hjemmesiden. Moderate fejl gør det ikke er optimalt for brugeren og de mindre fejl er et eller andet</p>
               <Image className="w-auto object-contain" src={data.screenshot.url} alt="Logo" width={data.screenshot.width} height={data.screenshot.height} />
             </div>
@@ -48,7 +48,7 @@ export default async function Resultat({ searchParams }) {
               </summary>
               <ul className="flex flex-col gap-y-8 p-6 my-3 mx-5 justify-between">
                 {major.map((d) => (
-                  <ViolationList key={d.id} error={d.id} description={d.description} />
+                  <ViolationList params={d.id} key={d.id} error={d.id} description={d.description} />
                 ))}
               </ul>
             </details>
@@ -62,7 +62,7 @@ export default async function Resultat({ searchParams }) {
               </summary>
               <ul className="flex flex-col gap-y-6 p-6 my-0 mx-0 sm:mx-5 sm:my-3">
                 {moderate.map((d) => (
-                  <ViolationList key={d.id} error={d.id} description={d.description} />
+                  <ViolationList params={d.id} key={d.id} error={d.id} description={d.description} />
                 ))}
               </ul>
             </details>
@@ -76,7 +76,7 @@ export default async function Resultat({ searchParams }) {
               </summary>
               <ul className="flex flex-col gap-y-6 p-6 my-3 mx-5">
                 {minor.map((d) => (
-                  <ViolationList key={d.id} error={d.id} description={d.description} />
+                  <ViolationList params={d.id} key={d.id} error={d.id} description={d.description} />
                 ))}
               </ul>
             </details>
