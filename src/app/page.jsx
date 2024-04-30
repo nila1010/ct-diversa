@@ -42,7 +42,7 @@ export default function Home() {
       <Heading as="h1" customClass="mb-2">
         Web tilgængeligheds validater
       </Heading>
-      <p className="max-w-[65ch] text-sm mb-10">Indsat hjemmesidens adresse og få en rapport på hvordan tilgængeligheden på dit website ser ud. Husk at skriv https:// efterfult af hjemmeside adressen</p>
+      <p className="max-w-[65ch] text-sm mb-10">Indsat hjemmesidens adresse og få en rapport på hvordan tilgængeligheden på dit website ser ud. Husk at skriv https:// efterfulgt af hjemmeside adressen</p>
       <form action="/resultat" className="mb-5">
         <label htmlFor="form_url" className="flex flex-wrap px-10 justify-center gap-2 sm:gap-0">
           <p className="sr-only">Skriv din url her</p>
