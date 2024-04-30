@@ -119,4 +119,16 @@ export const reglerData = [
     imgAlt2: "Placeholder billede",
     affect: ["Blind", "Døvblind"],
   },
+  {
+    name: "landmark-one-main",
+    shortDesc: "Sikrer, at dokumentet har et hovedlandemærke.",
+    longDesc: "Det er en bedste praksis at sikre, at der kun er ét hovedlandemærke til at navigere til sidenes primære indhold, og at hvis siden indeholder iframe-elementer, bør hver enten ikke indeholde nogen landemærker eller kun ét enkelt landemærke.",
+    impact: "Moderere",
+    whyDesc: "Det er meget lettere for brugere af skærmlæsere at navigere på en webside, hvis alt indholdet er opdelt mellem en eller flere højtstående sektioner. Indhold uden for disse sektioner er svært at finde, og dets formål kan være uklart.",
+    imgPath: "/img/placeholder.png",
+    imgAlt: "Placeholder billede",
+    imgPath2: "/img/placeholder.png",
+    imgAlt2: "Placeholder billede",
+    affect: ["Blind", "Døvblind", "Mobilitet"],
+  },
 ];
