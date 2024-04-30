@@ -3,7 +3,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-const poppins = Poppins({ subsets: ["latin"], weight: "400" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "700"], style: ["normal", "italic"] });
 
 export const metadata = {
   title: "Diversa - Tilgængeligheds check",

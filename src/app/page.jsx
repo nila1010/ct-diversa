@@ -1,4 +1,5 @@
 "use client";
+import Heading from "@/components/Headings";
 import Lastfound from "@/components/Lastfound";
 import Popoverindex from "@/components/Popoverindex";
 import { useEffect, useState, useRef } from "react";
@@ -34,10 +35,12 @@ export default function Home() {
     localStorage.setItem("Prev Search", JSON.stringify(items));
   }, [items]);
   return (
-    <section className="grid place-content-center text-center gap-5 m-10">
-      <h1 className="text-xl">Web tilgængeligheds validater</h1>
-      <p className="max-w-[65ch] text-sm">Indsat hjemmesidens adresse og få en rapport på hvordan tilgængeligheden på dit website ser ud. Husk at skriv https:// efterfult af hjemmeside adressen</p>
-      <form action="/resultat">
+    <section className="grid place-content-center text-center m-10">
+      <Heading as="h1" customClass="mb-2">
+        Web tilgængeligheds validater
+      </Heading>
+      <p className="max-w-[65ch] text-sm mb-10">Indsat hjemmesidens adresse og få en rapport på hvordan tilgængeligheden på dit website ser ud. Husk at skriv https:// efterfult af hjemmeside adressen</p>
+      <form action="/resultat" className="mb-5">
         <label htmlFor="form_url" className="flex flex-wrap px-10 justify-center gap-2 sm:gap-0">
           <p className="sr-only">Skriv din url her</p>
           <input ref={inputValue} className="rounded-l border-2 border-state-2 p-2 flex-0 w-full sm:flex-1" type="url" name="url" id="form_url" required placeholder="https://URL..." />
