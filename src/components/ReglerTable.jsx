@@ -8,12 +8,12 @@ const ReglerTable = () => (
         <table className={styles.table}>
             <thead>
                 <tr>
-                    <th className={styles.headerCell}>Title</th>
+                    <th className={styles.headerCell  }>Title</th>
                     <th className={`${styles.headerCell} ${styles.descColumn}`}>Beskrivelse</th>
-                    <th className={styles.headerCell}>Vigtighed</th>
+                    <th className={`${styles.headerCell} ${styles.descColumn}`}>Vigtighed</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="max-sm:grid gap-5">
                 {reglerData.map((item, index) => (
                     <TableRow key={item.name} item={item} index={index} />
                 ))}
