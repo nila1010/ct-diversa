@@ -51,9 +51,13 @@
    
 }
 
-.headerCell, .dataCell {
-    padding: 10px;
+.headerCell {
+    padding: 10px 0 10px 0;
     text-align: left;
+}
+
+.dataCell {
+    padding: 10px;
 }
 
 .headerCell {
