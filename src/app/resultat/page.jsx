@@ -3,6 +3,7 @@ import ViolationList from "@/components/ViolationList";
 import AnimatedCircle from "@/components/AnimatedCircle";
 import dummyData from "@/data/dummy";
 import { score } from "@/lib/CalcRating";
+import Heading from "@/components/Headings";
 
 export const revalidate = 1800;
 
@@ -10,7 +11,7 @@ export default async function Resultat({ searchParams }) {
   const params = new URLSearchParams(searchParams);
   const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
   const data = await response.json();
-  
+
   const violations = data.violations;
   const critical = violations.filter((one) => one.impact === "critical");
   const serious = violations.filter((one) => one.impact === "serious");
@@ -27,10 +28,14 @@ export default async function Resultat({ searchParams }) {
           <article className="grid grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-2">
             <div className="flex flex-col w-auto place-content-center gap-y-2 sm:order-2">
               <AnimatedCircle data={webScore} />
-              <h3 className="w-auto text-md text-center">Overall score</h3>
+              <Heading as="h3" customClass="w-auto text-md text-center">
+                Overall score
+              </Heading>
             </div>
             <div className="flex flex-col text-pretty gap-y-4 px-0 sm:order-1">
-              <h2 className="text-xl w-full hyphens-auto">{data.url}</h2>
+              <Heading as="h2" customClass="text-xl w-full hyphens-auto">
+                {data.url}
+              </Heading>
               <p className="text-sm">Nedenfor kan du se en raport over de tilgængelighedsprobler vi har fundet. De er opdelt i 3 kategorier hvor kritiske fejl kan forårsage at brugeren ikke kan bruge hjemmesiden. Moderate fejl gør det ikke er optimalt for brugeren og de mindre fejl er et eller andet</p>
               <Image className="w-auto object-contain" src={data.screenshot.url} alt="Logo" width={data.screenshot.width} height={data.screenshot.height} />
             </div>
@@ -38,7 +43,7 @@ export default async function Resultat({ searchParams }) {
         </section>
 
         <section className="flex flex-col gap-y-6 my-14 px-0">
-          <h3 className="text-xl">Fuld raport </h3>
+          <Heading as="h2">Full raport </Heading>
           {major.length != 0 && (
             <details className="bg-state-2-light  border-state-3 border-4 rounded border-solid open:transition-all transform group">
               <summary className='flex place-items-center bg-state-3 justify-between text-lg px-2 hover:cursor-pointer sm:px-6 md:px-10 after:text-2xl after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180'>
@@ -56,7 +61,7 @@ export default async function Resultat({ searchParams }) {
           {moderate.length != 0 && (
             <details className="bg-state-2-light rounded border-state-2 align-center border-4 border-solid open:transition-all transform group">
               <summary className='flex place-items-center bg-state-2 justify-between text-lg px-2 hover:cursor-pointer sm:px-6 md:px-10 after:text-2xl after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180'>
-                 <div>
+                <div>
                   <span>{moderate.length}</span> moderate fejl
                 </div>
               </summary>

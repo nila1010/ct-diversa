@@ -37,6 +37,10 @@ body {
   color: var(--colors-grey-80);
 }
 
+p {
+  font-weight: 300;
+}
+
 main {
   flex-grow: 1;
   overflow: hidden;
