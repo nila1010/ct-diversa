@@ -18,7 +18,7 @@ export default function Home() {
       };
 
       setItems((prevItems) => {
-        let updatedItems = [...prevItems];
+        let updatedItems = [].concat(prevItems);
 
         if (updatedItems.length === 4) {
           updatedItems.shift();
