@@ -12,7 +12,7 @@
   --colors-brand-yellow-20: rgba(255, 234, 128, 0.2);
   --colors-brand-yellow-40: oklch(93.26% 0.1523 98);
   --colors-brand-yellow-100: oklch(81.48% 0.1931 95);
-  --colors-brand-orange-20: oklab(72.1%, 33%, 32%);
+  --colors-brand-orange-20: oklch(91.7% 0.18387 44.119);
   --colors-brand-orange-70: oklch(72.07% 0.2317 44);
   --colors-grey-00: rgba(255, 255, 255, 1);
   --colors-grey-20: rgba(204, 204, 204, 1);
