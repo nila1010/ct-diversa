@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Regler.module.css";
 import ReglerHeader from "@/components/ReglerHeader";
 import ReglerTable from "@/components/ReglerTable";
@@ -25,11 +24,11 @@ export function getImpactClassName(impact) {
   return className;
 }
 
-const Regler = () => (
-  <div className="m-10">
-    <ReglerHeader />
-    <ReglerTable />
-  </div>
-);
-
-export default Regler;
+export default function Regler() {
+  return (
+    <div className="m-10">
+      <ReglerHeader />
+      <ReglerTable />
+    </div>
+  );
+}
