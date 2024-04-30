@@ -143,4 +143,5 @@ export const reglerData = [
     imgAlt2: "Placeholder billede",
     affect: ["Blind", "Døvblind", "Mobilitet"],
   },
+
 ];

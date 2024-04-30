@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <header className="relative z-10 bg-backgound-color-secondary">
           <Navigation />
         </header>
-        <main className="grid max-w-[1500px] m-auto">{children}</main>
+        <main className="grid max-w-[1500px] w-[100%] m-auto">{children}</main>
         <footer className="bg-primary-color">
           <Footer />
         </footer>
