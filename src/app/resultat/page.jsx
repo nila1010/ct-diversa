@@ -27,7 +27,7 @@ export default async function Resultat({ searchParams }) {
         <section className="mb-10">
           <article className="grid grid-cols-1 gap-x-12 gap-y-8 sm:grid-cols-2">
             <div className="flex flex-col w-auto place-content-center gap-y-2 sm:order-2">
-              <AnimatedCircle data={webScore} />
+              <AnimatedCircle data={webScore}/>
               <Heading as="h3" customClass="w-auto text-md text-center">
                 Overall score
               </Heading>
