@@ -131,4 +131,16 @@ export const reglerData = [
     imgAlt2: "Placeholder billede",
     affect: ["Blind", "Døvblind", "Mobilitet"],
   },
+  {
+    name: "region",
+    shortDesc: "Ensures all page content is contained by landmarks",
+    longDesc: "Brugere af skærmlæsere kan navigere til en sektion baseret på dens HTML-element eller ARIA-landemærke. For eksempel kan du bruge ARIA-landemærker til at tilbyde en simpel erstatning for et link til at springe navigation over, selvom erstatningen kun er nyttig for brugere af skærmlæsere.",
+    impact: "Moderere",
+    whyDesc: "Det er meget lettere for brugere af skærmlæsere at navigere på en webside, hvis indholdet er opdelt mellem flere højtstående sektioner. Indhold uden for sektionerne er svært at finde, og formålet med indholdet kan være uklart",
+    imgPath: "/img/placeholder.png",
+    imgAlt: "Placeholder billede",
+    imgPath2: "/img/placeholder.png",
+    imgAlt2: "Placeholder billede",
+    affect: ["Blind", "Døvblind", "Mobilitet"],
+  },
 ];
