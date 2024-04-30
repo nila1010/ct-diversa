@@ -5,7 +5,11 @@ import Popoverindex from "@/components/Popoverindex";
 import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
-  const [items, setItems] = useState();
+  let prev;
+  if (typeof window !== "undefined") {
+    prev = JSON.parse(localStorage.getItem("Prev Search"));
+  }
+  const [items, setItems] = useState(prev);
   const inputValue = useRef();
 
   function AddData() {
@@ -31,7 +35,6 @@ export default function Home() {
   }
 
   useEffect(() => {
-    const prev = JSON.parse(localStorage.getItem("Prev Search"));
     localStorage.setItem("Prev Search", JSON.stringify(items));
   }, [items]);
   return (
