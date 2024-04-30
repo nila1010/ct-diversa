@@ -24,7 +24,7 @@ function Navigation() {
       <Link href="/#">
         <div className="flex gap-5">
           <Image alt="Diverse logo" src="/logo/diversa_icon.svg" width={49} height={49} />
-          <Image alt="Diverse logo" src="/logo/diversa.svg" width={160} height={37} />
+          <Image className="invisible min-[400px]:visible" alt="Diverse logo" src="/logo/diversa.svg" width={160} height={37} />
         </div>
       </Link>
       {width > 860 ? (
