@@ -54,7 +54,8 @@ export default function Home() {
       </form>
       <div className="flex justify-center gap-x-10 gap-y-5 items-start flex-wrap">
         <Popoverindex />
-        {prev.length > 0 && <Lastfound data={items} />}
+
+        <Lastfound data={items} />
       </div>
     </section>
   );
