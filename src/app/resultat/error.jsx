@@ -13,7 +13,7 @@ function Error() {
           </Butten>
         </div>
       </div>
-      <div className="mt-5 place-self-center sm:mt-0 sm:place-self-auto">
+      <div className="mt-5 place-self-center sm:mt-0">
         <Image src="/error_icon.png" alt="Logo der viser fejl" width={320} height={320} />
       </div>
     </section>
