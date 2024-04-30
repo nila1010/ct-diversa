@@ -3,9 +3,12 @@ import { useState, useEffect } from "react";
 
 function AnimatedCircle({ data }) {
   const [value, setValue] = useState(0);
-  const divStyle = {
-    background: `conic-gradient(color-mix(in hsl, red, green calc(${value} * 1%)) ${value * 3.6}deg, var(--colors-brand-beige-00) 0deg)`,
-  };
+  const divStyle = [{
+    background: `conic-gradient(color-mix(in oklch, red, green calc(${value} * 1%)) ${value * 3.6}deg, var(--colors-brand-beige-00) 0deg)`,
+  },
+  {
+    background: `color-mix(in oklch, red, lime calc(${value} * 1%))`,
+  }];
 
   useEffect(() => {
     const counter = setInterval(() => {
@@ -23,10 +26,10 @@ function AnimatedCircle({ data }) {
   }, []);
 
   return (
-    <figure className="place-self-center order-first sm:order-none grid place-items-center relative">
-      <div style={divStyle} className="w-[250px] aspect-square rounded-full"></div>
-      <div className="bg-background-color-primary w-[200px] aspect-square rounded-full absolute"></div>
-      <p className="absolute text-2xl ">{value}%</p>
+    <figure className="place-self-center aspect-square order-first sm:order-none grid place-items-center relative">
+      <div style={divStyle[0]} className="w-[250px] aspect-square rounded-full lg:w-[350px]"></div>
+      <div style={divStyle[1]} className="bg-state-3 w-[180px] aspect-square rounded-full absolute lg:w-[280px]"></div>
+      <p className="absolute text-2xl">{value}%</p>
     </figure>
   );
 }
