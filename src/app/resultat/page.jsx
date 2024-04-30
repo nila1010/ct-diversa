@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ViolationList from "@/components/ViolationList";
 import AnimatedCircle from "@/components/AnimatedCircle";
-import dummyData from '@/data/dummy'
+import dummyData from "@/data/dummy";
 import { score } from "@/lib/CalcRating";
 
 export const revalidate = 1800;
@@ -30,7 +30,7 @@ export default async function Resultat({ searchParams }) {
               <h3 className="w-auto text-md text-center">Overall score</h3>
             </div>
             <div className="flex flex-col text-pretty gap-y-4 px-0 sm:order-1">
-              <h2 className="text-xl w-full">{data.url}</h2>
+              <h2 className="text-xl w-full hyphens-auto">{data.url}</h2>
               <p className="text-sm">Nedenfor kan du se en raport over de tilgængelighedsprobler vi har fundet. De er opdelt i 3 kategorier hvor kritiske fejl kan forårsage at brugeren ikke kan bruge hjemmesiden. Moderate fejl gør det ikke er optimalt for brugeren og de mindre fejl er et eller andet</p>
               <Image className="w-auto object-contain" src={data.screenshot.url} alt="Logo" width={data.screenshot.width} height={data.screenshot.height} />
             </div>
