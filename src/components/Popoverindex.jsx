@@ -4,7 +4,7 @@ function Popoverindex() {
       <button popovertarget="pop" className="py-2 px-5 text-lg relative before:rounded before:absolute before:inset-0 before:content-[''] before:bg-state-2 before:scale-x-[0] hover:before:scale-x-[1] before:transition before:duration-500 before:ease-out before:origin-left before:-z-10 after:bg-state-1 after:-z-20 after:content-[''] after:absolute after:inset-0 after:rounded">
         Hvad tester vi for?
       </button>
-      <div popover="manual" id="pop" className="absolute bottom-[-340px] max-w-[400px] bg-state-1-light outline-state-1 outline outline-2 rounded px-5 pb-3">
+      <div popover="manual" id="pop" className="absolute bottom-[-440px] max-w-[400px] bg-state-1-light outline-state-1 outline outline-2 rounded px-5 pb-3">
         <div className="flex place-content-center gap-5 ">
         <p className="text-left">
   Vi sikrer jeres indholds tilgængelighed ved at teste efter WCAG 2.1 guidelines på Level A, AA, AAA og bedste praksis. For mere detaljeret information, besøg
