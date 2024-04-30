@@ -10,7 +10,7 @@ export default async function Resultat({ searchParams }) {
   const params = new URLSearchParams(searchParams);
   const response = await fetch(`https://mmd-a11y-api.vercel.app/api/scan?${params.toString()}`);
   const data = await response.json();
-
+  
   const violations = data.violations;
   const critical = violations.filter((one) => one.impact === "critical");
   const serious = violations.filter((one) => one.impact === "serious");
@@ -41,42 +41,42 @@ export default async function Resultat({ searchParams }) {
           <h3 className="text-xl">Fuld raport </h3>
           {major.length != 0 && (
             <details className="bg-state-2-light  border-state-3 border-4 rounded border-solid open:transition-all transform group">
-              <summary className='flex gap-3 bg-state-3 justify-between place-items-center text-lg px-2 hover:cursor-pointer sm:px-6 md:px-10 after:text-2xl after:content-[">"] group-open:after:transition-all group-open:after:rotate-90 group-open:after:text-2xl'>
+              <summary className='flex place-items-center bg-state-3 justify-between text-lg px-2 hover:cursor-pointer sm:px-6 md:px-10 after:text-2xl after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180'>
                 <div>
                   <span>{major.length}</span> kritiske fejl
                 </div>
               </summary>
               <ul className="flex flex-col gap-y-8 p-6 my-3 mx-5 justify-between">
                 {major.map((d) => (
-                  <ViolationList key={d.id} error={d.id} description={d.description} />
+                  <ViolationList params={d.id} key={d.id} error={d.id} description={d.description} />
                 ))}
               </ul>
             </details>
           )}
           {moderate.length != 0 && (
             <details className="bg-state-2-light rounded border-state-2 align-center border-4 border-solid open:transition-all transform group">
-              <summary className='flex place-items-center bg-state-2 justify-between text-lg px-2 hover:cursor-pointer sm:px-6 md:px-10 after:text-2xl after:content-[">"] group-open:after:transition-all group-open:after:rotate-90 group-open:after:text-2xl'>
-                <div>
+              <summary className='flex place-items-center bg-state-2 justify-between text-lg px-2 hover:cursor-pointer sm:px-6 md:px-10 after:text-2xl after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180'>
+                 <div>
                   <span>{moderate.length}</span> moderate fejl
                 </div>
               </summary>
               <ul className="flex flex-col gap-y-6 p-6 my-0 mx-0 sm:mx-5 sm:my-3">
                 {moderate.map((d) => (
-                  <ViolationList key={d.id} error={d.id} description={d.description} />
+                  <ViolationList params={d.id} key={d.id} error={d.id} description={d.description} />
                 ))}
               </ul>
             </details>
           )}
           {minor.length != 0 && (
             <details className="bg-state-2-light border-state-1 rounded border-solid border-4 open:transition-all group">
-              <summary className='flex gap-3 bg-state-1 justify-between text-lg px-2 sm:px-4 md:px-10 hover:cursor-pointer after:content-[">"] group-open:after:transition-all group-open:after:rotate-90'>
+              <summary className='flex place-items-center bg-state-1 justify-between text-lg px-2 hover:cursor-pointer sm:px-6 md:px-10 after:text-2xl after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180'>
                 <div>
                   <span>{minor.length}</span> mindre fejl
                 </div>
               </summary>
               <ul className="flex flex-col gap-y-6 p-6 my-3 mx-5">
                 {minor.map((d) => (
-                  <ViolationList key={d.id} error={d.id} description={d.description} />
+                  <ViolationList params={d.id} key={d.id} error={d.id} description={d.description} />
                 ))}
               </ul>
             </details>
