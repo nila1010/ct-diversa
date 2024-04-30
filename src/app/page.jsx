@@ -9,7 +9,9 @@ export default function Home() {
         <label htmlFor="form_url" className="flex flex-wrap px-10 justify-center gap-2 sm:gap-0">
           <p className="sr-only">Skriv din url her</p>
           <input className="rounded-l border-2 border-state-2 p-2 flex-0 w-full sm:flex-1" type="url" name="url" id="form_url" required placeholder="https://URL..." />
-          <Butten variant="primaryRoundedR">Analyser</Butten>
+          <Butten variant="primaryRoundedR" path="resultat/">
+            Analyser
+          </Butten>
         </label>
       </form>
       <div className="flex justify-center gap-x-10 gap-y-5 items-start flex-wrap">
