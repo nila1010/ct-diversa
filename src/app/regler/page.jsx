@@ -1,4 +1,4 @@
-import styles from "./Regler.module.css";
+import styles from "@/components/Regler.module.css";
 import ReglerHeader from "@/components/ReglerHeader";
 import ReglerTable from "@/components/ReglerTable";
 
