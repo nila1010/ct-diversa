@@ -7,7 +7,7 @@ function Loading() {
       <article className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-0">
         <div>
           <h1 className="text-xl text-state-1">Søgning igang</h1>
-          <p className="text-sm max-w-prose">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui dicta illo eum id aspernatur totam, dolorem hic iure quod laborum eligendi reiciendis consequatur officiis. Minus, fugit laudantium! Quaerat, rem eos.</p>
+          <p className="text-sm max-w-prose">Nedenfor kommer du til at se en raport over de tilgængelighedsproblemer vi har fundet. De er opdelt i 3 kategorier hvor kritiske fejl kan forårsage at brugeren ikke kan bruge hjemmesiden. Moderate fejl gør det ikke er optimalt for brugeren og de mindre fejl er et eller andet der ikke har nogen større påvirkning.</p>
         </div>
         <div className="place-self-center order-first sm:order-none grid place-items-center relative">
           <Skeleton height={250} width={250} circle={true} />
