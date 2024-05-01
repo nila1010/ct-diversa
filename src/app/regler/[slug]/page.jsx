@@ -32,7 +32,7 @@ export default async function Regl({ params }) {
 
   return (
     <section className="p-10">
-      <Heading as="h1">{`${data.name.charAt(0).toUpperCase()}${data.name.slice(1)}`}</Heading>
+      <Heading as="h1" customClass="mb-3">{`${data.name.charAt(0).toUpperCase()}${data.name.slice(1)}`}</Heading>
       <Bar impact={data.impact} />
       <div className="mt-10">
         <Heading as="h2">Hvem det påvirker:</Heading>
