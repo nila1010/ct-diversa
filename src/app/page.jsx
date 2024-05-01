@@ -6,12 +6,14 @@ import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
   const [newLocalStorage, setNewLocalStorage] = useState([]);
+  const [showLastVisit, setShowLastVisit] = useState(false);
 
   const inputValue = useRef();
 
   useEffect(() => {
     if (localStorage.getItem("PrevSearch")) {
       setNewLocalStorage(JSON.parse(localStorage.getItem("PrevSearch")));
+      setShowLastVisit(true);
     }
   }, []);
 
@@ -31,7 +33,7 @@ export default function Home() {
 
       <div className="flex justify-center gap-x-10 gap-y-5 items-start flex-wrap">
         <Popoverindex />
-        <Lastfound data={newLocalStorage} />
+        {showLastVisit && <Lastfound data={newLocalStorage} />}
       </div>
     </section>
   );
