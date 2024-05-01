@@ -55,7 +55,7 @@ export default function Home() {
       <div className="flex justify-center gap-x-10 gap-y-5 items-start flex-wrap">
         <Popoverindex />
 
-        <Lastfound data={items} />
+        {prev.length > 0 && <Lastfound data={items} />}
       </div>
     </section>
   );
