@@ -42,9 +42,9 @@ p {
 }
 
 main {
-  flex-grow: 1;
-  overflow: hidden;
-  height: 100%;
+  /*   flex-grow: 1; */
+  /*   overflow: hidden;
+  height: 100%; */
 }
 
 @layer utilities {

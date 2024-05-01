@@ -1,3 +1,4 @@
+"use client";
 import Button from "@/components/Butten";
 
 export default function Lastfound({ data }) {
@@ -13,7 +14,7 @@ export default function Lastfound({ data }) {
                   <p className="truncate">Url: {o.searchUrl}</p>
                   <p>Dato: {o.date}</p>
                 </div>
-                <Button variant="primarySmall" path={`resultat/${o.searchUrl}`}>
+                <Button variant="primarySmall" path={`resultater/${o.id}`}>
                   Se data
                 </Button>
               </li>
