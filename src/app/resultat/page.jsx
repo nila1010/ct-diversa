@@ -51,7 +51,7 @@ export default async function Resultat({ searchParams }) {
             Komplet rapport
           </Heading>
           <details className="bg-state-3-light border-state-3 border-4 rounded border-solid open:transition-all group">
-            <summary className={`${major.length < 1 ? "pointer-events-none" : "cursor-pointer"} flex place-items-center bg-state-3 justify-between text-lg px-2 after:origin-center hover:cursor-pointer sm:px-6 md:px-10 after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180`}>
+            <summary className={`${major.length < 1 ? "pointer-events-none" : "cursor-pointer"} flex place-items-center bg-state-3 justify-between text-lg px-2 after:origin-center hover:cursor-pointer sm:px-6 md:px-10 after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180 group-open:after:transform group-open:after:-translate-y-2 group-open:after:translate-x-2`}>
               <div>
                 <span>{major.length}</span> kritiske fejl
               </div>
@@ -64,7 +64,7 @@ export default async function Resultat({ searchParams }) {
           </details>
 
           <details className="bg-state-2-light rounded border-state-2 align-center border-4 border-solid open:transition-all group">
-            <summary className={`${moderate.length < 1 ? "pointer-events-none" : "cursor-pointer"} flex place-items-center bg-state-2 justify-between text-lg px-2 after:origin-center hover:cursor-pointer sm:px-6 md:px-10 after:content[primary-color] after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180`}>
+            <summary className={`${moderate.length < 1 ? "pointer-events-none" : "cursor-pointer"} flex place-items-center bg-state-2 justify-between text-lg px-2 after:origin-center hover:cursor-pointer sm:px-6 md:px-10 after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180 group-open:after:transform group-open:after:-translate-y-2 group-open:after:translate-x-2`}>
               <div>
                 <span>{moderate.length}</span> moderate fejl
               </div>
@@ -77,7 +77,7 @@ export default async function Resultat({ searchParams }) {
           </details>
 
           <details className="bg-state-2-light border-state-1 rounded border-solid border-4 open:transition-all group">
-            <summary className={`${minor.length < 1 ? "pointer-events-none" : "cursor-pointer"} flex place-items-center bg-state-1 justify-between text-lg px-2 after:origin-center hover:cursor-pointer sm:px-6 md:px-10 after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180`}>
+            <summary className={`${minor.length < 1 ? "pointer-events-none" : "cursor-pointer"} flex place-items-center bg-state-1 justify-between text-lg px-2 after:origin-center hover:cursor-pointer sm:px-6 md:px-10 after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180 group-open:after:transform group-open:after:-translate-y-2 group-open:after:translate-x-2`}>
               <div>
                 <span>{minor.length}</span> mindre fejl
               </div>
