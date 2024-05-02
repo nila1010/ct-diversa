@@ -21,7 +21,7 @@ export const reglerData = [
     imgAlt: "Placeholder billede",
     imgPath2: "/img/placeholder.png",
     imgAlt2: "Placeholder billede",
-    affect: ["Blind", "Døvblind", "Kornetiv"],
+    affect: ["Blind", "Døvblind", "Kognitiv"],
   },
   {
     name: "th-has-data-cells",

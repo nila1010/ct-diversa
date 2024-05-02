@@ -35,11 +35,11 @@ export default async function Regl({ params }) {
       <Heading as="h1" customClass="mb-3">{`${data.name.charAt(0).toUpperCase()}${data.name.slice(1)}`}</Heading>
       <Bar impact={data.impact} />
       <div className="mt-10">
-        <Heading as="h2">Hvem det påvirker:</Heading>
-        <ul className="flex gap-2">
+        <Heading as="h2"  >Hvem det påvirker:</Heading>
+        <ul className="flex gap-2 flex-wrap">
           {data.affect.map((one, index) => {
             return (
-              <li className="text-sm" key={index}>
+              <li className="relative top-2 text-sm text-center rounded w-40 secondary-color outline outline-[2px] outline-primary-color pl-2 pr-2" key={index}>
                 {one}
               </li>
             );
@@ -58,14 +58,14 @@ export default async function Regl({ params }) {
       <section className="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-10">
         <div>
           <Heading as="h3" customClass="text-center mb-2">
-            Hvad ingen desc ser
+          Visuel skærmoplevelse
           </Heading>
 
           <Image src={data.imgPath} alt={data.imgAlt} width={1920} height={1080} />
         </div>
         <div>
           <Heading as="h3" customClass="text-center mb-2">
-            Hvad du ikke ser
+          Tilgængelig skærmoplevelse
           </Heading>
 
           <Image src={data.imgPath2} alt={data.imgAlt2} width={1920} height={1080} />
