@@ -21,7 +21,7 @@ export default function ReglerTable() {
 
   return (
     <div className={styles.griditem}>
-      <div className="flex">
+      <div className="flex flex-wrap gap-1">
         <button className={btnStyle(null)} onClick={() => handleClick(null)}>
           Se alle
         </button>
