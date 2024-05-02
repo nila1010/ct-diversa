@@ -5,6 +5,7 @@ function AnimatedCircle({ data }) {
   const [value, setValue] = useState(0);
   const divStyle = [{
     background: `conic-gradient(color-mix(in oklch, red, green calc(${value} * 1%)) ${value * 3.6}deg, var(--colors-brand-beige-00) 0deg)`,
+    border: "solid 5px var(--colors-grey-20)"
   },
   {
     background: `color-mix(in oklch, red, lime calc(${value} * 1%))`,
