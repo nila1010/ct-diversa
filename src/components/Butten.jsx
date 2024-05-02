@@ -12,7 +12,7 @@ const variants = {
 
 function Linkbutten({ children, variant, path }) {
   return (
-    <Link className={variants[variant]} href={`/${path}`}>
+    <Link className={`${variants[variant]} z-10`} href={`/${path}`}>
       {children}
     </Link>
   );
