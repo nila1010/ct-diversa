@@ -76,7 +76,7 @@ export default async function Resultat({ searchParams }) {
             </ul>
           </details>
 
-          <details className="bg-state-2-light border-state-1 rounded border-solid border-4 open:transition-all group">
+          <details className=" bg-state-1-ultra-light border-state-1 rounded border-solid border-4 open:transition-all group">
             <summary className={`${minor.length < 1 ? "pointer-events-none" : "cursor-pointer"} flex place-items-center bg-state-1 justify-between text-lg px-2 after:origin-center hover:cursor-pointer sm:px-6 md:px-10 after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180 group-open:after:transform group-open:after:-translate-y-2 group-open:after:translate-x-2`}>
               <div>
                 <span>{minor.length}</span> mindre fejl
