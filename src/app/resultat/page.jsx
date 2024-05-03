@@ -50,7 +50,7 @@ export default async function Resultat({ searchParams }) {
           <Heading as="h2" customClass="!text-2xl">
             Komplet rapport
           </Heading>
-          <details className="bg-state-3-light border-state-3 border-4 rounded border-solid open:transition-all group">
+          <details className="bg-state-3-ultra-light border-state-3 border-4 rounded border-solid open:transition-all group">
             <summary className={`${major.length < 1 ? "pointer-events-none" : "cursor-pointer"} flex place-items-center bg-state-3 justify-between text-lg px-2 after:origin-center hover:cursor-pointer sm:px-6 md:px-10 after:rotate-90 after:content-[url("/icons/arrow.svg")] after:content-[w-6 h-6] group-open:after:transition-all group-open:after:rotate-180 group-open:after:transform group-open:after:-translate-y-2 group-open:after:translate-x-2`}>
               <div>
                 <span>{major.length}</span> kritiske fejl
