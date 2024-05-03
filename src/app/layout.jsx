@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="da">
       <head>
         <meta name="robots" content="noindex"></meta>
+        <link rel="icon" href="/logo/favicon.ico" type="image/x-icon" sizes="32x32" />
       </head>
       <body className={`${poppins.className} bg-background-color-primary`}>
         <header className="relative z-10 bg-backgound-color-secondary">
